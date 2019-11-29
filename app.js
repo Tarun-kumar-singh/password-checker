@@ -49,6 +49,18 @@ hbs.registerPartials(partialspath)
 
  })
 
+
+ app.get('/hacklist',(req,res)=>{
+  // url = 'https://haveibeenpwned.com/api/v3/breaches'
+  // request({url:url, json:true},(error,response) => {
+  //     if(error) return console.log(error)
+
+  //   })
+
+   res.render('breached_sites')
+
+})
+
 app.listen(port,()  =>{
   console.log("App is listening on port "+ port)
 })
