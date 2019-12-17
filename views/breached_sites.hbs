@@ -28,39 +28,44 @@
 <br><br><br>
 
 <center>
+   <div class="col-lg-4">
+    <input class="form-control" style="border-color: red" id="ex3" placeholder="Search By Name" type="text">
+    <br>
+    <button type="button" class="btn btn-outline-danger">Search
+    </button>
 
-	<div class="input-group mb-3">
- 		<form style="margin-left: 400px">
- 	 		<input type="text" style="width: 600px" placeholder="serach by keyword" class="form-control" placeholder="Recipient's username" >
- 	 		<br>
-  			<div class="input-group-append">
-    		<button style="width: 600px" class="btn btn-outline-secondary">Search</button>
-  			</div>
-  		</form>
- 	</div>
-
-<br><br>
-
-<ul class="list-unstyled">
-<div style="width: 800px;">
-  <li class="media" style="border-style: thick 3px black">
-    <img src="https://haveibeenpwned.com/Content/Images/PwnedLogos/CrimeAgencyVBulletin.png" width="100px" height="100px" class="mr-3" alt="...">
-    <div class="media-body">
-      <h5 class="mt-0 mb-1">List-based media object</h5>
-      Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-    </div>
-  </li>
-  <br><br>
-  <li class="media">
-    <img src="https://haveibeenpwned.com/Content/Images/PwnedLogos/CrimeAgencyVBulletin.png" width="100px" height="100px" class="mr-3" alt="...">
-    <div class="media-body">
-      <h5 class="mt-0 mb-1">List-based media object</h5>
-      Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-    </div>
-  </li>
-
-</ul>
-</div>
+  </div>
 </center>
+
+
+<center>
+<br><br>
+{{#each data}}
+<div class="card border-danger mb-3" style="max-width: 60rem;">
+    <img src={{ this.LogoPath }} style="max-height:110px; "  class = "img-thumbnail" alt = "image logo">
+
+  <div class="card-header bg-danger text-white border-danger"><h2> {{ this.Name }} </h2></div>
+  <div class="card-body text-white bg-danger">
+    <h5 class="card-title">{{ this.title }}</h5>
+    <p><b> Domain:</b> {{ this.Domain }}</p>
+    <p><b>Breach Date :</b> {{ this.BreachDate }}</p>
+    <p><b> Pwned :</b> {{ this.PwnCount}} </p>
+    <p class="description">{{this.Description }}</p>
+    <p><b>Data breached:</b> {{ this.DataClasses }}</p>
+
+  </div>
+ </div>
+ <br><br>
+{{/each}}
+</center>
+<script type="text/javascript">
+  d = document.querySelectorAll(".description");
+  document.querySelectorAll(".description").innerHTML = 'hello0....'
+     // for (var i = 0; i < d.length; i++) {
+        
+    //   d[i].innerHTML = values[i]
+
+    // }
+</script>
   </body>
   </html>
