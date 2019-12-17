@@ -9,9 +9,10 @@
   <body>
     
 
+
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark"><i>
   <a class="navbar-brand" style="color: red" href="/">HackNews</a></i>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="true" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarText">
@@ -32,10 +33,13 @@
   	<h1>How safe your password, that you are using ?</h1>
  <p>Put any password to check that has it been ever hacked ?</p>
   	<form action="" style="margin-top: 50px;">
-    	  <div class="form-group">
-     <input class="form-control input-sm" id="inputsm"  style="width: 600px" type="text">
-      </div>
-    	<button>Submit</button>
+   
+      <div class="col-lg-4">
+     <input class="form-control" id='inputsm' style="border-color:red;" placeholder="Type your password" type="text" required="">
+       <br>
+      <button type="button" class="btn btn-outline-danger">Search
+    </button>
+  </div>
     </form>
   </center>
   <br>
@@ -43,13 +47,19 @@
  <h2 style="color:blue;margin-left: 50%;margin-top: 100px;"> Wait...</h2>  </div>  
  	<br>
 
- <div class="card" style="width: 500px;margin-left: 30%;display: none;">
+<center>
+<div id = "report1" class="card text-white mb-3 bg-danger" style="max-width: 60rem; justify-content: center; display: none;">
   <h5 class="card-header">Report generated</h5>
-  <div class="card-body" style="background-color: gray">
-    <h5 class="card-title">  </h5>
+  <div class="card-body">
+    <h5 class="card-title"> </h5>
     <p class="card-text"> </p>
-   </div>
+  </div>
 </div>
+</center>
+
+
+
+
 
 
 
