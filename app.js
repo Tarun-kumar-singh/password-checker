@@ -54,10 +54,8 @@ hbs.registerPartials(partialspath)
   url = 'https://haveibeenpwned.com/api/v3/breaches'
   request({url:url, json:true},(error,response) => {
       if(error) return console.log(error)
-      // console.log(Object.keys(response))
-        res.render('breached_sites',{data : response.body})
-        console.log(response.body[0] )
-    })
+         res.render('breached_sites',{data : response.body})
+     })
 
 })
 
