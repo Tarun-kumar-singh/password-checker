@@ -29,19 +29,29 @@
 
 <center>
    <div class="col-lg-4">
-    <input class="form-control" style="border-color: red" id="ex3" placeholder="Search By Name" type="text">
-    <br>
+    <input class="form-control" id='search' style="border-color: red" placeholder="Search By Name" type="text">
+ 
+   
+   <div id= "searchresult">
+     
+   </div>
+  
+ <br>
+ 
     <button type="button" class="btn btn-outline-danger">Search
     </button>
 
   </div>
+
+
 </center>
 
 
 <center>
 <br><br>
+<div id="searchresults">
 {{#each data}}
-<div class="card border-danger mb-3" style="max-width: 60rem;">
+<div class="card border-danger mb-3 result" style="max-width: 60rem;">
     <img src={{ this.LogoPath }} style="max-height:110px; "  class = "img-thumbnail" alt = "image logo">
 
   <div class="card-header bg-danger text-white border-danger"><h2> {{ this.Name }} </h2></div>
@@ -50,22 +60,15 @@
     <p><b> Domain:</b> {{ this.Domain }}</p>
     <p><b>Breach Date :</b> {{ this.BreachDate }}</p>
     <p><b> Pwned :</b> {{ this.PwnCount}} </p>
-    <p class="description">{{this.Description }}</p>
+    <div>{{ this.Description }}</div>
     <p><b>Data breached:</b> {{ this.DataClasses }}</p>
 
   </div>
  </div>
  <br><br>
 {{/each}}
+</div>
 </center>
-<script type="text/javascript">
-  d = document.querySelectorAll(".description");
-  document.querySelectorAll(".description").innerHTML = 'hello0....'
-     // for (var i = 0; i < d.length; i++) {
-        
-    //   d[i].innerHTML = values[i]
-
-    // }
-</script>
+<script type="text/javascript" src="/search_result.js"></script>
   </body>
   </html>
