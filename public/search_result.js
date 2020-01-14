@@ -104,7 +104,7 @@ data = [ '000webhost',
   ]
 
 search.addEventListener('input',()=>{
-console.log(search.value)
+ 
  matches = data.filter((element)=>{
                         const regex = new RegExp(`^${search.value}`,'gi')
                         // console.log(element)
@@ -124,15 +124,16 @@ console.log(search.value)
    const outputHtml = matches => {
       if (matches.length > 0) {
            htmlx = matches.map(
-               match => 
-              `<option value = ${match}>${match}</option>`
+               match =>    
+              `<div class="card card-body bg-danger mb-1" onClick = "autoFill(${match})">${match}</div>`
           ).join('');
-
-
-          htmlx =  `<div class="form-group">
-     <select multiple class="form-control" id="exampleFormControlSelect2">  ${htmlx}  </select>
-  </div>`
-
             return htmlx  
       }
      }
+
+
+
+function autoFill(match){
+search.value = match
+
+}
